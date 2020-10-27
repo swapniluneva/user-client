@@ -1,0 +1,21 @@
+<style>
+    .heading {
+        font-weight: bold;
+    }
+</style>
+<table>
+    <tbody>
+        <tr>
+            <th colspan="4">Data Form</th>
+        </tr>
+        <tr colspan="data.colspan" ng-repeat="data in formData">
+            <td ng-class="col.class" ng-repeat="col in data.cols track by $index">
+                <span ng-if="col.type != 'input'">{{col.value}}</span>
+                <input type="text" ng-if="col.type == 'input'" ng-model="col.value">
+            </td>
+        </tr>
+        <tr>
+            <th colspan="4"><input type="submit" value="GO" ng-click="addData()" /></th>
+        </tr>
+    </tbody>
+</table>

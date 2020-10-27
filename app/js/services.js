@@ -2,6 +2,26 @@ angular.module('UserApp.services', [])
     .factory('userAPIService', function($http) {
         var userAPI = {};
 
+        const dataHost = "http://127.0.0.1:8078/api/data/";
+
+        userAPI.getQRUrl = (eId) => {
+            return dataHost + "getQRCode?eId=" + encodeURIComponent(eId);
+        }
+        userAPI.addData = function(user) {
+            return $http({
+                method: 'POST',
+                url: dataHost + "addData/",
+                data: user
+            });
+        }
+
+        userAPI.getData = function(eId) {
+            return $http({
+                method: 'GET',
+                url: dataHost + "getData?eId=" + eId
+            });
+        }
+
         userAPI.getUsers = function(page) {
             return $http({
                 method: 'GET',

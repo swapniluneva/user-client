@@ -1,0 +1,21 @@
+<style>
+    .heading {
+        font-weight: bold;
+    }
+</style>
+<table>
+    <tbody>
+        <tr>
+            <th colspan="4"></th>
+        </tr>
+        <tr>
+            <th colspan="4"><img ng-src="{{codeUrl}}" /></th>
+        </tr>
+        <tr colspan="data.colspan" ng-repeat="data in formData">
+            <td ng-class="col.class" ng-repeat="col in data.cols track by $index">
+                {{col.value}}
+            </td>
+        </tr>
+
+    </tbody>
+</table>
