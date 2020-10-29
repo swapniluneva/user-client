@@ -2,20 +2,47 @@
     .heading {
         font-weight: bold;
     }
+    
+    .heading1 {
+        font-weight: bold;
+        text-align: right;
+    }
+    
+    .heading2 {
+        text-align: left;
+    }
+    
+    .title {
+        font-weight: bold;
+    }
+    
+    .column {
+        float: left;
+        width: 25%;
+        display: block;
+        margin: auto;
+    }
+    
+    .columnFull {
+        float: left;
+        width: 100%;
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+    /* Clear floats after the columns */
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 </style>
-<table>
-    <tbody>
-        <tr>
-            <th colspan="4"></th>
-        </tr>
-        <tr>
-            <th colspan="4"><img ng-src="{{codeUrl}}" /></th>
-        </tr>
-        <tr colspan="data.colspan" ng-repeat="data in formData">
-            <td ng-class="col.class" ng-repeat="col in data.cols track by $index">
-                {{col.value}}
-            </td>
-        </tr>
 
-    </tbody>
-</table>
+<div class="row">
+    <div class="columnFull"> <img style="text-align: center;display: block;margin: auto;" ng-src="{{codeUrl}}" /> </div>
+</div>
+
+<div class="row" ng-repeat="data in formData">
+    <div ng-class="col.class" ng-repeat="col in data.cols track by $index"> {{col.value}} </div>
+</div>

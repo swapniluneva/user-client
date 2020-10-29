@@ -7,139 +7,131 @@ controller('userController', function($scope, userAPIService, $location) {
     $scope.formData = [{
             colspan: 4,
             cols: [
-                { class: 'heading', value: "Directorate Of Geology & Mining Uttar Pradesh Minor Mineral Concession Rules 1963 e-Transit Pass For Transportation & Minor Mineral See Rules 70(1) Form MM1" }
+                { class: 'title columnFull', value: "Directorate Of Geology & Mining Uttar Pradesh Minor Mineral Concession Rules 1963 e-Transit Pass For Transportation & Minor Mineral See Rules 70(1) Form MM1" }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading', value: "1.eMM11:" },
-                { type: 'input', value: '' },
-                { class: 'heading', value: "2. Name Of Lessee /Permit Holder:" },
-                { type: 'input', value: '' }
+                { class: 'heading column', value: "1.eMM11:" },
+                { class: 'column', type: 'input', value: '' },
+                { class: 'heading column', value: "2. Name Of Lessee /Permit Holder:" },
+                { class: 'column', type: 'input', value: '' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading', value: "3. Mobile Number Of Lessee:" },
-                { type: 'input', value: '' },
-                { class: 'heading', value: "4. Tin Number:" },
-                { type: 'input', value: '' }
+                { class: 'heading column', value: "3. Mobile Number Of Lessee:" },
+                { class: 'column', type: 'input', value: '' },
+                { class: 'heading column', value: "4. Tin Number:" },
+                { class: 'column', type: 'input', value: '' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading', value: "5. Lessee Id:" },
-                { type: 'input', value: '' },
-                { class: 'heading', value: " 6. Lease Details [Address,Village,(Gata/Khand),Area]" },
-                { type: 'input', value: '' }
+                { class: 'heading column', value: "5. Lessee Id:" },
+                { class: 'column', type: 'input', value: '' },
+                { class: 'heading column', value: " 6. Lease Details [Address,Village,(Gata/Khand),Area]" },
+                { class: 'column', type: 'input', value: '' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading', value: "7. Tehsil Of Lease:" },
-                { type: 'input', value: '' },
-                { class: 'heading', value: "8. District Of Lease:" },
-                { type: 'input', value: '' }
+                { class: 'heading column', value: "7. Tehsil Of Lease:" },
+                { class: 'column', type: 'input', value: '' },
+                { class: 'heading column', value: "8. District Of Lease:" },
+                { class: 'column', type: 'input', value: '' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading', value: "9. QTY Transported in Cubic Meter:" },
-                { type: 'input', value: '' },
-                { class: 'heading', value: "10. Name Of Mineral:" },
-                { type: 'input', value: '' }
+                { class: 'heading column', value: "9. QTY Transported in Cubic Meter:" },
+                { class: 'column', type: 'input', value: '' },
+                { class: 'heading column', value: "10. Name Of Mineral:" },
+                { class: 'column', type: 'input', value: '' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading', value: "11. Loading From:" },
-                { type: 'input', value: '' },
-                { class: 'heading', value: "12. Destination (Delivery Address):" },
-                { type: 'input', value: '' }
+                { class: 'heading column', value: "11. Loading From:" },
+                { class: 'column', type: 'input', value: '' },
+                { class: 'heading column', value: "12. Destination (Delivery Address):" },
+                { class: 'column', type: 'input', value: '' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading', value: "13. Distance(Approx in K.M.):" },
-                { type: 'input', value: '' },
-                { class: 'heading', value: "14. eTP Generated On:" },
-                { type: 'input', value: '' }
+                { class: 'heading column', value: "13. Distance(Approx in K.M.):" },
+                { class: 'column', type: 'input', value: '' },
+                { class: 'heading column', value: "14. eTP Generated On:" },
+                { class: 'column', type: 'input', value: '' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading', value: "15. eMM11 Valid Upto:" },
-                { type: 'input', value: '' },
-                { class: 'heading', value: "16. Traveling Duration:" },
-                { type: 'input', value: '' }
+                { class: 'heading column', value: "15. eMM11 Valid Upto:" },
+                { class: 'column', type: 'input', value: '' },
+                { class: 'heading column', value: "16. Traveling Duration:" },
+                { class: 'column', type: 'input', value: '' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading', value: "17. Destination District:" },
-                { type: 'input', value: '' }
+                { class: 'heading column', value: "17. Destination District:" },
+                { class: 'column', type: 'input', value: '' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading', value: "18.Pits Mouth Value(Rs/m3 &Rs/Ton for Silica sand):" },
-                { type: 'input', value: '' }
-            ]
-        },
-        {
-            colspan: 1,
-            cols: [
-                { class: 'heading', value: "1.eMM11:" },
-                { type: 'input', value: '' },
-                { class: 'heading', value: "2. Name Of Lessee /Permit Holder:" },
-                { type: 'input', value: '' }
+                { class: 'heading column', value: "18.Pits Mouth Value(Rs/m3 &Rs/Ton for Silica sand):" },
+                { class: 'column', type: 'input', value: '' }
             ]
         },
         {
             colspan: 4,
             cols: [
-                { class: 'heading', value: "Details Of Registered Vehicle" }
+                { class: 'title columnFull', value: "Details Of Registered Vehicle" }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading', value: "1. Registration Number :" },
-                { type: 'input', value: '' },
-                { class: 'heading', value: "2. Type Of Vehicle:" },
-                { type: 'input', value: '' }
+                { class: 'heading column', value: "1. Registration Number :" },
+                { class: 'column', type: 'input', value: '' },
+                { class: 'heading column', value: "2. Type Of Vehicle:" },
+                { class: 'column', type: 'input', value: '' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading', value: "3. Name Of Driver :" },
-                { type: 'input', value: '' },
-                { class: 'heading', value: "4. Mobile Number Of Driver:" },
-                { type: 'input', value: '' }
+                { class: 'heading column', value: "3. Name Of Driver :" },
+                { class: 'column', type: 'input', value: '' },
+                { class: 'heading column', value: "4. Mobile Number Of Driver:" },
+                { class: 'column', type: 'input', value: '' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading', value: "5. DL Number Of Driver:" },
-                { type: 'input', value: '' }
+                { class: 'heading column', value: "5. DL Number Of Driver:" },
+                { class: 'column', type: 'input', value: '' }
             ]
         },
         {
-            colspan: 4,
+            colspan: 2,
             cols: [
-                { class: 'heading', value: "This eMM11 is valid up to:-20-01-2020 08:08:24 PM" }
+                { class: 'heading1 column', value: "This eMM11 is valid up to:-" },
+                { class: 'heading2 column', class: 'column', type: 'input', value: "" }
             ]
         }
     ];
