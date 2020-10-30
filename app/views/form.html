@@ -11,7 +11,7 @@
         <tr colspan="data.colspan" ng-repeat="data in formData">
             <td ng-class="col.class" ng-repeat="col in data.cols track by $index">
                 <span ng-if="col.type != 'input'">{{col.value}}</span>
-                <input type="text" ng-if="col.type == 'input'" ng-model="col.value">
+                <input type="text" ng-if="col.type == 'input'" ng-model="printData[col.name]">
             </td>
         </tr>
         <tr>

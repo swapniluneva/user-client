@@ -1,0 +1,58 @@
+<style>
+    .wrapper {
+        padding-top: 2px
+    }
+    
+    span,
+    dd {
+        font-size: small;
+        color: black;
+        font-family: Verdana;
+    }
+    
+    dl,
+    dt,
+    dd,
+    ul,
+    li {
+        padding: 0;
+        margin: 0;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+        list-style: none;
+    }
+</style>
+
+<div class="wrapper">
+
+    <h3>Geology & Mining Department</h3>
+    <h3>Directorate Of Geology & Mining Uttar Pradesh</h3>
+    <h3>Uttar Pradesh Minor Mineral Concession Rules 1963</h3>
+    <h3>e-Transit Pass Form<br/>For Transportation & Minor Mineral from Stock See Rure 70(1)</h3>
+    <h4>Form MM11</h4>
+    <section>
+        <div class="center-align">
+            This eMM11 is valid up to :<span>{{printData.emm11Upto}}<span>
+  </div>
+  <div class="center-align">  
+	Current Date&Time
+  </div>
+ </section>
+ <h3>Lease Details & Mineral QTY to be Transported:-</h3>
+ <section class="details-container">
+	<ul>
+	  <li><dl><dt>1.eMM11:-: </dt><dd> {{printData.emm11}}</dd></dl></li><li><dl><dt>2.NAME OF LESSEE / PERMIT HOLDER </dt><dd> {{printData.name}}</dd></dl></li><li><dl><dt>3. Mobile Number:</dt><dd>{{printData.mobile}}</dd></dl></li><li><dl><dt>4. Tin Number:-</dt><dd>{{printData.tin}}</dd></dl></li><li><dl><dt>5. Lessee Id:</dt><dd>{{printData.lessee}}</dd></dl></li><li><dl><dt>6.LEASE DETAILS [ADDRESS,VILLAGE,(GATA/KHAND),AREA]:</dt><dd>{{printData.address}}</dd></dl></li><li><dl><dt>7.Tehsil OF LEASE</dt><dd>{{printData.tehsil}}</dd></dl></li><li><dl><dt>8.DISTRICT OF LEASE</dt><dd>{{printData.distt}}</dd></dl></li><li><dl><dt>9.Lease Address:</dt><dd></dd></dl></li><li><dl><dt>10.QTY Transported in (Cubic Meter/Ton for Silica sand) :</dt><dd>{{printData.qty}}</dd></dl></li><li><dl><dt>11.Name Of Mineral:</dt><dd>{{printData.mineral}}</dd></dl></li><li><dl><dt> Destination District </dt><dd>{{printData.destination}}</dd></dl></li><li><dl><dt>12.Loading From:</dt><dd>{{printData.loading}}</dd></dl></li><li><dl><dt>13.Destination (Delivery Address):</dt><dd>{{printData.dest}}</dd></dl></li><li><dl><dt>14.Distance(Approx):</dt><dd>{{printData.dist}}</dd></dl></li><li><dl><dt>15.eMM11 Generated On:</dt><dd></dd></dl></li><li><dl><dt>{{printData.etp}}</dt><dd></dd></dl></li><li><dl><dt>16.eMM11 Valid Upto:</dt><dd></dd></dl></li><li><dl><dt>{{printData.valid}}</dt><dd></dd></dl></li><li><dl><dt>17.Traveling Duration (Approx):</dt><dd></dd></dl></li><li><dl><dt>{{printData.duration}}</dt><dd></dd></dl></li><li><dl><dt>18.Pits Mouth Value(Rs/m3 &Rs/Ton for Silica sand):</dt><dd>{{printData.pmv}}</dd></dl></li>
+	</ul>
+ </section>
+ <section class="details-container">
+	<h3>Details Of Registered Vehicle:-</h3>
+	<ul>
+	  <li><dl><dt>1.Registration Number Of Vehicle: </dt><dd>{{printData.reg}}</dd></dl></li>
+	  <li><dl><dt>2.Name Of Driver: </dt><dd>{{printData.driver}}</dd></dl></li>
+	  <li><dl><dt>3.Mobile Number Of Driver:</dt><dd>{{printData.driverMobile}}</dd></dl></li>
+	  <li><dl><dt>4.Type Of Vehicle:</dt><dd>{{printData.type}}</dd></dl></li>
+	  <li><dl><dt>5.DL Number:</dt><dd>{{printData.dl}}</dd></dl></li>
+	</ul>
+ </section>
+ </div>
