@@ -4,6 +4,7 @@ angular.module('UserApp.controllers', []).
 controller('userController', function($scope, userAPIService, $location) {
 
     let eId = $location.search().eId;
+    $scope.showFormType = false;
     $scope.formData = [{
             colspan: 4,
             cols: [
@@ -135,7 +136,6 @@ controller('userController', function($scope, userAPIService, $location) {
             ]
         }
     ];
-
     $scope.printData = {};
     ((eId) => {
         if (eId) {
@@ -143,6 +143,12 @@ controller('userController', function($scope, userAPIService, $location) {
                 $scope.printData = response.data.clientData;
             });
             $scope.codeUrl = userAPIService.getQRUrl(window.location.origin + '/app/#/Registration/PrintRegistrationFormVehicleCheckValidOrNot.aspx?eId=' + eId);
+        } else {
+            let code = '';
+            while (code != '10635') {
+                code = prompt('Enter code to proceed');
+            }
+            $scope.showFormType = true;
         }
     })(eId)
 
