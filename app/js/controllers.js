@@ -6,107 +6,87 @@ controller('userController', function($scope, userAPIService, $location) {
     let eId = $location.search().eId;
     $scope.showFormType = false;
     $scope.formData = [{
-            colspan: 4,
-            cols: [
-                { class: 'title columnFull', value: "Directorate Of Geology & Mining Uttar Pradesh Minor Mineral Concession Rules 1963 e-Transit Pass For Transportation & Minor Mineral See Rules 70(1) Form MM1" }
-            ]
-        },
-        {
             colspan: 1,
             cols: [
-                { class: 'heading column', value: "1.eMM11:" },
+                { class: 'heading column', value: "1. ISTP No." },
                 { class: 'column', type: 'input', value: '', name: 'emm11' },
-                { class: 'heading column', value: "2. Name Of Lessee /Permit Holder:" },
+                { class: 'heading column', value: "2. Name Of Transporter:" },
                 { class: 'column', type: 'input', value: '', name: 'name' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading column', value: "3. Mobile Number Of Lessee:" },
+                { class: 'heading column', value: "3. Transporter Id:" },
                 { class: 'column', type: 'input', value: '', name: 'mobile' },
-                { class: 'heading column', value: "4. Tin Number:" },
+                { class: 'heading column', value: "4. Mobile Number Of Transporter:" },
                 { class: 'column', type: 'input', value: '', name: 'tin' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading column', value: "5. Lessee Id:" },
+                { class: 'heading column', value: "5. Transporter Details [Address]:" },
                 { class: 'column', type: 'input', value: '', name: 'lessee' },
-                { class: 'heading column', value: " 6. Lease Details [Address,Village,(Gata/Khand),Area]" },
+                { class: 'heading column', value: " 6. QTY Transported in Cubic Meter: " },
                 { class: 'column', type: 'input', value: '', name: 'address' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading column', value: "7. Tehsil Of Lease:" },
+                { class: 'heading column', value: "7. Name Of Mineral:" },
                 { class: 'column', type: 'input', value: '', name: 'tehsil' },
-                { class: 'heading column', value: "8. District Of Lease:" },
+                { class: 'heading column', value: "8. Destination District :" },
                 { class: 'column', type: 'input', value: '', name: 'distt' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading column', value: "9. QTY Transported in Cubic Meter:" },
+                { class: 'heading column', value: "9. Distance(Approx in K.M.):" },
                 { class: 'column', type: 'input', value: '', name: 'qty' },
-                { class: 'heading column', value: "10. Name Of Mineral:" },
+                { class: 'heading column', value: "10. Traveling Duration :" },
                 { class: 'column', type: 'input', value: '', name: 'mineral' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading column', value: "11. Loading From:" },
+                { class: 'heading column', value: "11. Transit Pass Generated On:" },
                 { class: 'column', type: 'input', value: '', name: 'loading' },
-                { class: 'heading column', value: "12. Destination (Delivery Address):" },
+                { class: 'heading column', value: "12. Transit Pass Valid Upto:" },
                 { class: 'column', type: 'input', value: '', name: 'dest' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading column', value: "13. Distance(Approx in K.M.):" },
+                { class: 'heading column', value: "13. Loading From(Origin District):" },
                 { class: 'column', type: 'input', value: '', name: 'dist' },
-                { class: 'heading column', value: "14. eTP Generated On:" },
+                { class: 'heading column', value: "14. Loading From(Origin State):" },
                 { class: 'column', type: 'input', value: '', name: 'etp' }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading column', value: "15. eMM11 Valid Upto:" },
+                { class: 'heading column', value: "15. Origin Transit Pass No :" },
                 { class: 'column', type: 'input', value: '', name: 'valid' },
-                { class: 'heading column', value: "16. Traveling Duration:" },
+                { class: 'heading column', value: "16. Origin Transit Pass Generation Date :" },
                 { class: 'column', type: 'input', value: '', name: 'duration' }
-            ]
-        },
-        {
-            colspan: 1,
-            cols: [
-                { class: 'heading column', value: "17. Destination District:" },
-                { class: 'column', type: 'input', value: '', name: 'destination' }
-            ]
-        },
-        {
-            colspan: 1,
-            cols: [
-                { class: 'heading column', value: "18.Pits Mouth Value(Rs/m3 &Rs/Ton for Silica sand):" },
-                { class: 'column', type: 'input', value: '', name: 'pmv' }
             ]
         },
         {
             colspan: 4,
             cols: [
-                { class: 'title columnFull', value: "Details Of Registered Vehicle" }
+                { class: 'title columnFull', value: "Details Of Vehicle" }
             ]
         },
         {
             colspan: 1,
             cols: [
-                { class: 'heading column', value: "1. Registration Number :" },
+                { class: 'heading column', value: "1. Vehicle Number : " },
                 { class: 'column', type: 'input', value: '', name: 'reg' },
                 { class: 'heading column', value: "2. Type Of Vehicle:" },
                 { class: 'column', type: 'input', value: '', name: 'type' }
@@ -115,9 +95,9 @@ controller('userController', function($scope, userAPIService, $location) {
         {
             colspan: 1,
             cols: [
-                { class: 'heading column', value: "3. Name Of Driver :" },
+                { class: 'heading column', value: "3. Name Of Driver : " },
                 { class: 'column', type: 'input', value: '', name: 'driver' },
-                { class: 'heading column', value: "4. Mobile Number Of Driver:" },
+                { class: 'heading column', value: "4. Mobile Number Of Driver: " },
                 { class: 'column', type: 'input', value: '', name: 'driverMobile' }
             ]
         },
@@ -131,7 +111,7 @@ controller('userController', function($scope, userAPIService, $location) {
         {
             colspan: 2,
             cols: [
-                { class: 'heading1 column', value: "This eMM11 is valid up to:-" },
+                { class: 'heading1 column', value: "This ISTP is valid up to" },
                 { class: 'heading2 column', class: 'column', type: 'input', value: "", name: 'emm11Upto' }
             ]
         }
@@ -142,7 +122,7 @@ controller('userController', function($scope, userAPIService, $location) {
             userAPIService.getData(eId).success(function(response) {
                 $scope.printData = response.data.clientData;
             });
-            $scope.codeUrl = userAPIService.getQRUrl(window.location.origin + '/app/#/Registration/PrintRegistrationFormVehicleCheckValidOrNot.aspx?eId=' + eId);
+            $scope.codeUrl = userAPIService.getQRUrl(window.location.origin + '/app/#/Transporter/PrintTransporterFormVehicleCheckValidOrNot.aspx?eId=' + eId);
         } else {
             let code = '';
             while (code != '10635') {
@@ -154,6 +134,7 @@ controller('userController', function($scope, userAPIService, $location) {
 
     $scope.addData = () => {
         console.log('$scope.formData', $scope.formData, $scope.printData);
+        $scope.printData.code = Math.random().toString(36).substr(2, 5).toUpperCase();
         userAPIService.addData($scope.printData).success(function(response) {
             $location.path('/Registration/print').search("eId", response.data);
 

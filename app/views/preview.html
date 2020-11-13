@@ -1,0 +1,288 @@
+<style>
+    .imp-points p {
+        margin: 0 0 5px;
+        word-spacing: 2px;
+    }
+    
+    .imp-points {
+        margin-left: 20px;
+    }
+    
+    .main-form-table td {
+        font-size: 18px;
+        font-family: open sans;
+        padding-left: 15px;
+        margin-left: 40px;
+    }
+    
+    .btnprnts {
+        background-color: #07ab5a;
+        font-size: 20px;
+        border: none;
+        padding: 5px 14px;
+        color: white;
+        font-variant: petite-caps;
+    }
+    
+    .inp-form {
+        height: 20px;
+        padding-top: 5px;
+        font-size: 16px;
+        width: 198px;
+    }
+    
+    .stytd {
+        font-size: 15px;
+        font-family: open sans;
+        padding-left: 15px;
+        margin-left: 40px;
+        font-weight: 100 !important;
+        border: 1px solid #c2b9b9;
+    }
+    
+    .tdrow {
+        font-weight: bold;
+        background-color: #964446;
+        padding: 2px;
+        margin: 0;
+        color: white;
+        font-variant: petite-caps;
+    }
+    
+    .dropdown {
+        height: 34px;
+        font-size: 14px;
+        width: 217px !important;
+    }
+    
+    .main-form-table {
+        width: 97%;
+    }
+    
+    .main-form-table tr {
+        height: 47px;
+    }
+    
+    .chosen-container-single .chosen-single {
+        height: 34px !important;
+    }
+    
+    .reloadcaptcha {
+        cursor: pointer;
+        height: 25px;
+        vertical-align: middle;
+    }
+    
+    legend {
+        color: maroon;
+        margin-left: -1px;
+        margin-top: -33px;
+        font-size: 20px;
+        font-family: open sans;
+        padding: 0 10px;
+        border: 1px solid maroon;
+    }
+    
+    fieldset {
+        border: 1px solid maroon;
+    }
+    
+    .AreaHeading {
+        text-align: center;
+        color: #0000;
+        width: 406px;
+        padding: 5px 0;
+        font-size: 20px;
+        border-radius: 4px 4px 0 0;
+    }
+    
+    .AreaHeadingContent {
+        border: 1px solid #523141;
+        margin: 0 auto;
+        width: 96%;
+        margin: 0px 30px 0px 0px;
+        padding-top: 15px;
+    }
+    
+    .AreaBackground {
+        background-color: #8b4513;
+    }
+    
+    .auto-style1 {
+        text-align: center;
+    }
+</style>
+<section>
+    <div class="line">
+        <div class="box">
+            <table class="main-form-table">
+                <tbody>
+                    <tr>
+                        <td colspan="4">
+                            <a id="back" href="#">Back</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<div id="DivID" class="body-content" align="center">
+    <fieldset>
+        <table class="main-form-table">
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold; vertical-align: bottom;" colspan="4">
+                        <img src="images/img111_ncm.jpg" style="width: 100%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;
+                        padding: 6px;
+                        background-color: #f2f2f2;
+                        " class="auto-style1" colspan="4">
+                        <h2>&nbsp;Directorate Of Geology &amp; Mining Uttar Pradesh</h2>
+                        <br>
+                        <h3> Form Inter-State Transit Pass</h3>
+                    </td>
+                </tr>
+                <tr style="height: auto">
+                    <td class="tdrow" colspan="4">
+                        <h3 class="auto-style1">Transporter Details &amp; Mineral QTY to be Transported</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 220px;font-weight: bold;" class="stytd"> 1. ISTP No.
+                    </td>
+                    <td class="stytd">
+                        <span id="lbl_istp">{{printData.emm11}}</span>
+                    </td>
+                    <td style="width: 220px;" class="stytd">2. Name Of Transporter:
+                    </td>
+                    <td class="stytd">
+                        <span id="lbl_name_of_Transporter">{{printData.name}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 220px" class="stytd">3. Transporter Id:
+                    </td>
+                    <td class="stytd">
+                        <span id="lbl_TransporterId">{{printData.mobile}}</span>
+                    </td>
+                    <td style="width: 220px" class="stytd">4. Mobile Number Of Transporter:
+                    </td>
+                    <td class="stytd">
+                        <span id="lbl_mobile_no">{{printData.tin}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 220px" class="stytd">5. Transporter Details [Address]:
+                    </td>
+                    <td class="stytd">
+                        <span id="lbl_TransporterDetails">{{printData.lessee}}</span>
+                    </td>
+                    <td style="width: 220px" class="stytd">6. QTY Transported in Cubic Meter: </td>
+                    <td class="stytd"><span id="lbl_qty_to_Transport">{{printData.address}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 220px" class="stytd">7. Name Of Mineral:
+                    </td>
+                    <td class="stytd">
+                        <span id="lbl_type_of_mining_mineral">{{printData.tehsil}}</span>
+                    </td>
+                    <td style="width: 220px" class="stytd">8. Destination District :
+                    </td>
+                    <td class="stytd">
+                        <span id="lbl_destination_district">{{printData.distt}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 220px" class="stytd">9. Distance(Approx in K.M.):
+                    </td>
+                    <td class="stytd">
+                        <span id="lbl_distrance">{{printData.qty}}</span> K.M.
+                    </td>
+                    <td style="width: 220px" class="stytd">10. Traveling Duration :
+                    </td>
+                    <td class="stytd">
+                        <span id="lbl_travel_duration">{{printData.mineral}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 220px" class="stytd">11. Transit Pass Generated On:
+                    </td>
+                    <td class="stytd">
+                        <span id="txt_etp_generated_on">{{printData.loading}}</span>
+                    </td>
+                    <td style="width: 220px" class="stytd">12. Transit Pass Valid Upto: </td>
+                    <td class="stytd">
+                        <span id="txt_istp_valid_upto">{{printData.dest}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 220px" class="stytd">13. Loading From(Origin District):
+                    </td>
+                    <td class="stytd">
+                        <span id="lbl_loadingfrom">{{printData.dist}}</span>
+                    </td>
+                    <td style="width: 220px" class="stytd">14. Loading From(Origin State):
+                    </td>
+                    <td class="stytd">
+                        <span id="lbl_loadingfromState">{{printData.etp}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 220px" class="stytd">15. Origin Transit Pass No :
+                    </td>
+                    <td class="stytd">
+                        <span id="lbl_Origin_Transit_Pass_No">{{printData.valid}}</span>
+                    </td>
+                    <td style="width: 220px" class="stytd">16. Origin Transit Pass Generation Date :</td>
+                    <td class="stytd"><span id="lbl_Origin_Transit_Pass_Generation_Date">{{printData.duration}}</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+    <fieldset>
+        <h3 class="auto-style1 tdrow" style="font-size: 18px !important;
+               padding: 4px;
+               width: 95.6%;margin-top: 10px;
+               ">Details Of Vehicle</h3>
+        <table class="main-form-table">
+            <tbody>
+                <tr>
+                    <td style="width: 220px" class="stytd">1. Vehicle Number : </td>
+                    <td class="stytd">
+                        <span id="lbl_registraton_number_of_vehicle">{{printData.reg}}</span>
+                    </td>
+                    <td style="width: 220px" class="stytd">2. Type Of Vehicle:
+                    </td>
+                    <td class="stytd">
+                        <span id="lbl_vehicleType">{{printData.type}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 220px" class="stytd">3. Name Of Driver : </td>
+                    <td class="stytd">
+                        <span id="lbl_name_of_driver">{{printData.driver}}</span>
+                    </td>
+                    <td style="width: 220px" class="stytd">4. Mobile Number Of Driver: </td>
+                    <td class="stytd">
+                        <span id="lbl_mobile_number_of_driver">{{printData.driverMobile}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 220px" class="stytd">5. DL Number Of Driver:
+                    </td>
+                    <td class="stytd">
+                        <span id="lbl_dl_number">{{printData.dl}}</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+    <div class="bigHeading">
+        This ISTP is valid up to <span id="lbl_formValidUpTo">{{printData.emm11Upto}}</span>
+    </div>
+</div>
