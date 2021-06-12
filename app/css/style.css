@@ -24,7 +24,7 @@ body{font-family:Verdana, Arial, Helvetica, sans-serif;color:#262626;background:
 input[type="text"]:focus, input[type="text"]:hover, input[type="password"]:focus, input[type="password"]:hover, textarea:focus, textarea:hover, select:focus, select:hover{box-shadow:0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px #1D61A4;border:1px solid #1D61A4;}
 .main-form-table{font-size:13px;width:100%;}
 .main-form-table tr{height:38px;}
-.main-form-table td{padding-left:25px;}
+.main-form-table td{padding-left:25px; font-size: 21px !important;}
 
 .main-form-table3{border-collapse:collapse;border-spacing:0;}
 .main-form-table3 tr{height:35px;}
